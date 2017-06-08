@@ -1,0 +1,243 @@
+img,ul,li,span,dl,dt,dd{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    width: 30%;
+    border: 2px dotted black;
+    padding: 0px 0;
+    padding-bottom: 8px;
+}
+ul{
+    margin:0 0;
+}
+nav ul li{
+    border:1px solid red;
+    margin-top: 8px;
+    height: 30px;
+}
+.select{
+    background-color: gray;
+}
+
+.pickup{
+    box-shadow:0px 0px 5px 5px yellow inset;
+}
+/*以下部分用于实现商品详情页效果，含放大镜*/
+.detail{
+    width: 800px;
+    /*box-sizing: border-box;*/
+    /*border: 1px dotted pink;*/
+    position: relative;
+    /*background-color: green;*/
+    /*overflow: hidden;*/
+}
+.detail>.detail_left{
+    width: 400px;
+    float: left;
+    /*border: 1px solid red;*/
+    position: relative;
+}
+.detail>.detail_left .bigimage{
+    width: 400px;
+    height: 400px;
+    border: 1px dotted pink;
+    /*position: absolute;*/
+}
+.detail>.detail_left .bigimage img{
+    width: 400px;
+    /*height: 400px;*/
+    /*position: absolute;*/
+}
+.detail>.detail_left .imagelist{
+    width: 400px;
+    height: 100px;
+    /*overflow: hidden;*/
+    position: relative;
+}
+.detail>.detail_left .imagelist .arrow{
+    display: block;
+    width: 22px;
+    height: 32px;
+    top: 50%;
+    margin-top: -16px;
+    position: absolute;
+}
+/*.detail>.detail_left .imagelist .arrow:first-of-type{
+    left: 0;
+}*/
+.detail>.detail_left .imagelist .arrow:last-of-type{
+    right: 0;
+}
+.detail>.detail_left .imagelist .arrow i.leftarrow{
+    display: block;
+    width: 22px;
+    height: 32px;
+    background-image: url(jpgs/leftarrow.png)
+}
+.detail>.detail_left .imagelist .arrow i.leftarrow.enable:hover{
+    background-image: url(jpgs/leftarrow1.png)
+}
+.detail>.detail_left .imagelist .arrow i.rightarrow{
+    display: block;
+    width: 22px;
+    height: 32px;
+    background-image: url(jpgs/rightarrow.png)
+}
+.detail>.detail_left .imagelist .arrow i.rightarrow.enable:hover{
+    background-image: url(jpgs/rightarrow1.png)
+}
+.detail>.detail_left .imagelist .images{
+    width: 340px;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.detail>.detail_left .imagelist .images ul{
+    width: 644px;
+    height: 100px;
+    list-style-type: none;
+    /*margin-left: 100px;*/
+    transition-property: "marginLeft";
+    transition-duration: 1s;
+}
+.detail>.detail_left .imagelist .images li{
+    /*display: inline-block;这时候会有字符间距*/
+    width: 80px;
+    height: 80px;
+    margin: 10px 6px;
+    float: left;
+}
+.detail>.detail_left .imagelist .images img{
+    width: 76px;
+    height: 76px;
+    border: 2px solid transparent;
+}
+.detail>.detail_left .imagelist .images img:hover{
+    border-color: darkred;
+}
+.detail>.detail_left #zoomicon{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    top: 375px;
+    opacity: 0.5;
+}
+.detail>.detail_left #zoomicon:hover{
+    opacity: 1;
+}
+.detail>.detail_left .pickbox{
+    /*display: none;*/
+    width: 198px;
+    height: 198px;
+    border: 1px solid gray;
+    background-color: olivedrab;
+    opacity: 0.2;
+    position: absolute;
+    top: -500px;
+    left: -500px;
+}
+.detail>.detail_left .pickbox:hover{
+    cursor: move;
+}
+.detail>.detail_left .zoom{
+    display: none;
+    width: 400px;
+    height: 400px;
+    border: 1px dotted pink;
+    position: absolute;
+    top: 0;
+    left: 401px;
+    overflow: hidden;
+}
+.detail>.detail_left .zoom img{
+    width: 1200px;
+    height: 1200px;
+}
+.detail>.detail_right{
+    width: 380px;
+    float: left;
+    margin-left: 20px;
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+}
+.detail_right h3+p{
+    text-indent: 2em;
+}
+.detail_right .shopping{
+    width: 380px;
+}
+.detail_right .shopping dl{
+    width: 100%;
+    height: 50px;
+}
+.detail_right .shopping dt{
+    width: 70px;
+    /*vertical-align: middle;*/
+    line-height: 50px;
+    float: left;
+}
+.detail_right .shopping dd{
+    width: 300px;
+    /*vertical-align: middle;*/
+    height: 50px;
+    margin-left: 10px;
+    float: left;
+}
+.detail_right .shopping .color>dd div{
+    width: 65px;
+    height: 40px;
+    margin: 4px;
+    border: 1px solid pink;
+    float: left;
+}
+.detail_right .shopping .color>dd img{
+    width: 65px;
+    /*height: 40px;*/
+}
+.detail_right .shopping .color>dd div:hover{
+    border: 1px solid darkred;
+}
+.detail_right .shopping dd span{
+    /*display: table-cell;*/
+    display: block;
+    text-align: center;
+    width: 40px;
+    height: 20px;
+    margin: 14px 4px;
+    border: 1px solid pink;
+    /*vertical-align: middle;*/
+    float: left;
+}
+.detail_right .shopping dd span:hover{
+    border: 1px solid darkred;
+}
+.detail_right .shopping .number{
+    width: 68px;
+    height: 48px;
+    border: 1px solid red;
+}
+.detail_right .shopping .number>input{
+    display: block;
+    width: 64px;
+    height: 42px;
+}
+.detail_right .shopping .pay>dd>div{
+    width: 150px;
+    height: 50px;
+    margin: 0 4px;
+    border: 1px solid darkred;
+    background-color: lightgreen;
+    line-height: 50px;
+    text-align: center;
+}
+/*.detail img{
+    display: none;
+}*/
+.detail:after{
+    content: "\20";
+    display: block;
+    clear: both;
+    height: 0;
+}
